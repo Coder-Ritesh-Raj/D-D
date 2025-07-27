@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Digital Diary</title>
+  <link rel="stylesheet" href="style2.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="welcome-box">
+    <h2>🎉 Access Your Digital Diary!!!</h2>
+
+    <form id="diaryForm">
+      <select id="classSelect" required>
+        <option value="" disabled selected>Select Class</option>
+        <option value="VI">Class VI</option>
+        <option value="VII">Class VII</option>
+        <option value="VIII">Class VIII</option>
+        <option value="IX">Class IX</option>
+        <option value="X">Class X</option>
+      </select>
+
+      <select id="sectionSelect" required>
+        <option value="" disabled selected>Select Section</option>
+        <option value="A">Section A</option>
+        <option value="B">Section B</option>
+        <option value="C">Section C</option>
+        <option value="D">Section D</option>
+        <option value="E">Section E</option>
+      </select>
+
+      <input type="text" id="teacherInput" placeholder="Enter Class Teacher's Name" required>
+
+      <button type="submit">📖 Get Your Digital Diary</button>
+    </form>
+  </div>
+
+  <script src="script2.js"></script>
+</body>
+</html>

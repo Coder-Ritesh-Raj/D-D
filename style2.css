@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url('https://media.istockphoto.com/id/1021641568/vector/pupil-kids-at-classroom-primary-school-children-pupils-smiling-boys-and-girls-study-in.jpg?s=612x612');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.welcome-box {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  width: 360px;
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5);
+  border: 2px solid #00fff7;
+}
+
+h2 {
+  margin-bottom: 30px;
+  font-size: 26px;
+  color: #00fff7;
+  text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7;
+}
+
+select, input[type="text"] {
+  display: block;
+  width: 100%;
+  height: 44px;
+  padding: 10px 12px;
+  margin: 12px 0;
+  font-size: 16px;
+  background: #111;
+  color: #00fff7;
+  border: 1px solid #00fff7;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00fff7;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+select:focus, input:focus {
+  outline: none;
+  box-shadow: 0 0 15px #00ffe1;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #00fff7;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 15px #00fff7;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+  background: #00e6ff;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00fff7, 0 0 25px #00fff7;
+}
+
+::placeholder {
+  color: #88ffff;
+}
+
+option {
+  background: #111;
+  color: #00fff7;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: #111 url('data:image/svg+xml;utf8,<svg fill="%2300fff7" height="18" viewBox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 14px center;
+  background-size: 18px;
+  padding-right: 40px;
+}

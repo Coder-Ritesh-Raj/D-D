@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Class IX 'A' Digital Diary</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+  document.addEventListener("contextmenu", (e) => e.preventDefault()); // Right-click block
+
+  document.onkeydown = function (e) {
+    if (
+      e.key === "F12" ||              // Dev Tools
+      (e.ctrlKey && e.shiftKey && e.key === "I") || // Ctrl+Shift+I
+      (e.ctrlKey && e.shiftKey && e.key === "J") || // Ctrl+Shift+J
+      (e.ctrlKey && e.key === "U") ||               // Ctrl+U (view source)
+      (e.ctrlKey && e.key === "S")                  // Ctrl+S (save page)
+    ) {
+      e.preventDefault();
+      return false;
+    }
+  };
+</script>
+
+ 
+</head>
+<body>
+
+  <h1 id="typing-heading">
+    <span id="typed-text"></span><span class="cursor">|</span>
+  </h1>
+
+  <div class="date-day-select">
+      <div>
+          <label for="dateTop"><b>Date:</b></label><br>
+          <input type="date" id="dateTop">
+      </div>
+
+      <div id="clock" class="live-clock"></div>
+
+      <div>
+        <label for="dayTop"><b>Day:</b></label><br>
+        <input type="text" id="dayTop" placeholder="Day will auto-fill" readonly>
+      </div>
+    </div>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Period No.</th>
+          <th>Subject</th>
+          <th>Topics</th>
+          <th>ClassWork (C.W.)</th>
+          <th>HomeWork (H.W.)</th>
+        </tr>
+      </thead>
+      <tbody id="diary-body">
+        <!-- Period rows will be inserted by JS -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
