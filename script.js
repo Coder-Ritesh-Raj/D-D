@@ -98,14 +98,14 @@ const sectionInfo = localStorage.getItem("selectedSection") || "A";
 const teacherInfo = localStorage.getItem("classTeacher") || "Mr. R.S. Rathore";
 
 const texts = [
-    `Class ${classInfo}ᵗʰ '${sectionInfo}' Digital Diary`,
-    `Class Teacher: ${teacherInfo}`
+    `Class ${classInfo}ᵗʰ '${sectionInfo}' Digital Diary.`,
+    `Class Teacher: ${teacherInfo}.`
 ];
 
 let part = 0;
 let i = 0;
 let isDeleting = false;
-let speed = 100;
+let speed = 90;
 
 const typedText = document.getElementById("typed-text");
 
