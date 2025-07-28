@@ -46,7 +46,7 @@ const subjectsWithIcons = (
   "Civics": "⚖️ Civics",
   "History": "🏰 History",
   "Economics": "💰 Economics",
-  "I.T.": "🖱 I.T.",
+  "I.T.": "💻 I.T.",
   "Library": "📚 Library",
   "Sports": "🏅 Sports",
   "STEAM": "🔧 STEAM",
