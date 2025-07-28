@@ -174,3 +174,32 @@ textarea {
     border-radius: 4px; /* Fixing typo from '1ax' to '4px' */
     border: 1px solid #ccc;
 }
+
+/* Inputs and textareas */
+input[type="text"],
+textarea,
+select {
+    border-radius: 8px;  /* 👈 Rounded corners */
+}
+
+/* Table corners */
+table {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Live clock badge */
+.live-clock {
+    border-radius: 10px;
+}
+
+/* Dropdown styling */
+select {
+    border-radius: 8px;
+}
+
+input[type="text"],
+textarea,
+select {
+    transition: border-radius 0.3s ease, box-shadow 0.3s ease;
+}

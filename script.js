@@ -11,9 +11,51 @@ const subjects_9_to_10 = [
     "Chemistry", "Biology", "Physics", "Geography","Civics", "History", "Economics", "I.T.", "Library", "Sports", "STEAM", "Robotics", "Chem. & Phy. LAB", "Che. & Bio LAB", "Phy. & Bio. LAB"
 ];
 
-const subjects = (
-    classLevel === "VI" || classLevel === "VII" || classLevel === "VIII"
-) ? subjects_6_to_8 : subjects_9_to_10;
+const subjectsWithIcons = (
+  classLevel === "VI" || classLevel === "VII" || classLevel === "VIII"
+) ? {
+  "English": "📖 English",
+  "English Grammar": "📝 English Grammar",
+  "Hindi": "📄 Hindi",
+  "Hindi Grammar": "📝 Hindi Grammar",
+  "Maths": "📐 Maths",
+  "Chemistry": "⚗️ Chemistry",
+  "Biology": "🧬 Biology",
+  "Physics": "🧲 Physics",
+  "History": "🏰 History",
+  "Geography": "🌍 Geography",
+  "Civics": "⚖️ Civics",
+  "Sanskrit": "📜 Sanskrit",
+  "Computer": "💻 Computer",
+  "V.Ed": "🙏 V.Ed",
+  "G.K.": "🌟 G.K.",
+  "Sports": "🏅 Sports",
+  "STEAM": "🔧 STEAM",
+  "Robotics": "🤖 Robotics",
+  "Library": "📚 Library"
+} : {
+  "English": "📖 English",
+  "English Grammar": "📝 English Grammar",
+  "Hindi": "📄 Hindi",
+  "Hindi Grammar": "📝 Hindi Grammar",
+  "Maths": "📐 Maths",
+  "Chemistry": "⚗️ Chemistry",
+  "Biology": "🧬 Biology",
+  "Physics": "🧲 Physics",
+  "Geography": "🌍 Geography",
+  "Civics": "⚖️ Civics",
+  "History": "🏰 History",
+  "Economics": "💰 Economics",
+  "I.T.": "🖱 I.T.",
+  "Library": "📚 Library",
+  "Sports": "🏅 Sports",
+  "STEAM": "🔧 STEAM",
+  "Robotics": "🤖 Robotics",
+  "Chem. & Phy. LAB": "🔬 Chem & Phy LAB",
+  "Che. & Bio LAB": "🧪 Che & Bio LAB",
+  "Phy. & Bio. LAB": "🔭 Phy & Bio LAB"
+};
+
 
 function createPeriodRow(period) {
     return `
@@ -22,7 +64,9 @@ function createPeriodRow(period) {
             <td>
                 <select>
                     <option value="" disabled selected>Select the subject</option>
-                    ${subjects.map(subject => `<option>${subject}</option>`).join('')}
+                    ${Object.keys(subjectsWithIcons)
+                      .map(subject => `<option value="${subject}">${subjectsWithIcons[subject]}</option>`)
+                      .join('')}
                 </select>
             </td>
             <td><textarea placeholder="Topic"></textarea></td>
