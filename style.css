@@ -135,8 +135,9 @@ tr:hover {
 }
 
 table {
-    border-radius: 8px;
+    border-radius: 99px;
     overflow: hidden;
+    opacity: 0.9;
 }
 
 /* ---------- Improved Dropdown Styling ---------- */
@@ -202,4 +203,32 @@ input[type="text"],
 textarea,
 select {
     transition: border-radius 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  padding: 10px 20px;
+  background: transparent; /* Removed white background */
+  width: 100%;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.logo {
+  height: 120px;
+  width: auto;
+  margin: 0;
+  border-radius: 8px;
+  background: transparent; /* just in case */
+}
+
+
+.main-content {
+  padding: 1px 20px;
+  box-sizing: border-box;
+  height: calc(100vh - 80px); /* Header height removed */
+  overflow-y: auto;
 }

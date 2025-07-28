@@ -5,35 +5,45 @@
   <title>Digital Diary</title>
   <link rel="stylesheet" href="style.css">
   <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUAt7HqAE8lUL8b8JvUu7VDI0d-_SRO7L9nA&s" type="image/x-icon">
+
   <script>
-  document.addEventListener("contextmenu", (e) => e.preventDefault()); // Right-click block
+    document.addEventListener("contextmenu", (e) => e.preventDefault()); // Right-click block
 
-  document.onkeydown = function (e) {
-    if (
-      e.key === "F12" ||              // Dev Tools
-      (e.ctrlKey && e.shiftKey && e.key === "I") || // Ctrl+Shift+I
-      (e.ctrlKey && e.shiftKey && e.key === "J") || // Ctrl+Shift+J
-      (e.ctrlKey && e.key === "U") ||               // Ctrl+U (view source)
-      (e.ctrlKey && e.key === "S")                  // Ctrl+S (save page)
-    ) {
-      e.preventDefault();
-      return false;
-    }
-  };
-</script>
-
- 
+    document.onkeydown = function (e) {
+      if (
+        e.key === "F12" ||              
+        (e.ctrlKey && e.shiftKey && e.key === "I") || 
+        (e.ctrlKey && e.shiftKey && e.key === "J") || 
+        (e.ctrlKey && e.key === "U") ||               
+        (e.ctrlKey && e.key === "S")                  
+      ) {
+        e.preventDefault();
+        return false;
+      }
+    };
+  </script>
 </head>
+
 <body>
 
-  <h1 id="typing-heading">
-    <span id="typed-text"></span><span class="cursor">|</span>
-  </h1>
+ <!-- Header with logo only -->
+<div class="header">
+  <img src="pcs-logo.png" alt="Logo" class="logo">
+</div>
 
-  <div class="date-day-select">
+<!-- Animated heading centered below -->
+<h1 id="typing-heading">
+  <span id="typed-text"></span><span class="cursor">|</span>
+</h1>
+
+  </div>
+
+  <!-- Main content section -->
+  <div class="main-content">
+    <div class="date-day-select">
       <div>
-          <label for="dateTop"><b>Date:</b></label><br>
-          <input type="date" id="dateTop">
+        <label for="dateTop"><b>Date:</b></label><br>
+        <input type="date" id="dateTop">
       </div>
 
       <div id="clock" class="live-clock"></div>
@@ -60,9 +70,6 @@
     </table>
   </div>
 
-  
   <script src="script.js"></script>
-  <!-- Footer added just before </body> -->
-</footer>
 </body>
 </html>
