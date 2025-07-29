@@ -215,29 +215,3 @@ document.getElementById("dateTop").addEventListener("change", function () {
         document.getElementById("dayTop").value = dayName;
     }
 });
-
-
-function updateClock() {
-  const now = new Date();
-  let hours = now.getHours();
-  const minutes = now.getMinutes();
-  const seconds = now.getSeconds();
-
-  const ampm = hours >= 12 ? 'PM' : 'AM';
-
-  // Convert to 12-hour format
-  hours = hours % 12;
-  hours = hours ? hours : 12; // the hour '0' should be '12'
-
-  const timeString = `${pad(hours)}:${pad(minutes)}:${pad(seconds)} ${ampm}`;
-  document.getElementById('clock').textContent = timeString;
-
-}
-
-function pad(n) {
-  return n < 10 ? '0' + n : n;
-}
-
-// Update clock every second
-setInterval(updateClock, 1000);
-updateClock(); // initial call
