@@ -229,14 +229,6 @@ input[type="text"] {
   z-index: 2; /* 👈 Brings date box above logo */
 }
 
-.logo {
-  height: 120px;
-  width: auto;
-  margin: 0;
-  border-radius: 8px;
-  background: transparent; /* just in case */
-}
-
 
 .main-content {
   padding: 1px 20px;
